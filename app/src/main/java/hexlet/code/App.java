@@ -6,7 +6,7 @@ public class App {
     public static final int ROUNDS = 3;
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Great\n2 - EvenGame\n3 - CalcGame\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
+        System.out.println("1 - Great\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
