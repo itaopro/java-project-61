@@ -7,7 +7,7 @@ public class PrimeGame {
 
     private static final Random random = new Random();
     public static void printInstructions() {
-        System.out.println('Answer \'yes\' if the number is prime, otherwise answer \'no\'.');
+        System.out.println("Answer 'yes' if the number is prime, otherwise answer 'no'.");
     }
     public static void runGame() {
         String[] questions = new String[App.ROUNDS];
