@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class EvenGame {
     public static void printInstructions() {
-        System.out.println("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+        System.out.println("Answer \'yes\' if the number is even, otherwise answer \'no\'.");
     }
     public static void runGame() {
         String[] correctAnswers = new String[App.ROUNDS];
