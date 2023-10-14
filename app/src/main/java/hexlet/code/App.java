@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class App {
 
     public static final int ROUNDS = 3;
+    public static String name;
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Great\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
@@ -19,23 +20,19 @@ public class App {
                 greetUser();
                 break;
             case 2:
-                EvenGame.printInstructions();
+                greetUser();
                 EvenGame.runGame();
                 break;
             case 3:
-                CalcGame.printInstructions();
                 CalcGame.runGame();
                 break;
             case 4:
-                GcdGame.printInstructions();
                 GcdGame.runGame();
                 break;
             case 5:
-                ProgressionGame.printInstructions();
                 ProgressionGame.runGame();
                 break;
             case 6:
-                PrimeGame.printInstructions();
                 PrimeGame.runGame();
                 break;
             case 0:
@@ -51,15 +48,15 @@ public class App {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
+        name = scanner.nextLine();
         System.out.println("Hello, " + name + "!");
         return name;
     }
 
-    public static void startGame(Object[][] dataRounds) {
+    public static void startGame(Object[][] dataRounds, String description) {
         Scanner scanner = new Scanner(System.in);
 
-        String name = greetUser();
+        System.out.println(description);
 
         String[] questions = (String[]) dataRounds[0];
         String[] correctAnswers = (String[]) dataRounds[1];
@@ -78,6 +75,6 @@ public class App {
             }
         }
 
-        System.out.println("Congratulations, " + name + "!!!");
+        System.out.println("Congratulations, "  + "!!!");
     }
 }

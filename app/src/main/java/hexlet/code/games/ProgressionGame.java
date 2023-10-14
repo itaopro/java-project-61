@@ -8,10 +8,9 @@ import java.util.Random;
 
 public class ProgressionGame {
 
+    public static final String DESCRIPTION = "What number is missing in the progression?";
+
     private static final Random random = new Random();
-    public static void printInstructions() {
-        System.out.println("What number is missing in the progression?");
-    }
     public static void runGame() {
         String[] questions = new String[App.ROUNDS];
         String[] correctAnswers = new String[App.ROUNDS];
@@ -31,7 +30,7 @@ public class ProgressionGame {
         }
 
         Object[][] dataRounds = {questions, correctAnswers};
-        App.startGame(dataRounds);
+        App.startGame(dataRounds, DESCRIPTION);
     }
 
         private static List<Integer> makeProgression() {

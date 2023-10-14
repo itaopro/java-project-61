@@ -4,9 +4,9 @@ import hexlet.code.App;
 import java.util.Random;
 
 public class CalcGame {
-    public static void printInstructions() {
-        System.out.println("What is the result of the expression?");
-    }
+
+    public static final String DESCRIPTION = "What is the result of the expression?";
+
     public static void runGame() {
         String[] questions = new String[App.ROUNDS];
         String[] correctAnswers = new String[App.ROUNDS];
@@ -24,7 +24,7 @@ public class CalcGame {
         }
 
         Object[][] dataRounds = {questions, correctAnswers};
-        App.startGame(dataRounds);
+        App.startGame(dataRounds, DESCRIPTION);
 
     }
 

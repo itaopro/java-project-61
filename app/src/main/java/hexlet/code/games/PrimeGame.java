@@ -5,10 +5,9 @@ import java.util.Random;
 
 public class PrimeGame {
 
+    public static final String DESCRIPTION = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
+
     private static final Random random = new Random();
-    public static void printInstructions() {
-        System.out.println("Answer 'yes' if the number is prime, otherwise answer 'no'.");
-    }
     public static void runGame() {
         String[] questions = new String[App.ROUNDS];
         String[] correctAnswers = new String[App.ROUNDS];
@@ -20,7 +19,7 @@ public class PrimeGame {
         }
 
         Object[][] dataRounds = {questions, correctAnswers};
-        App.startGame(dataRounds);
+        App.startGame(dataRounds, DESCRIPTION);
     }
 
     public static boolean isPrime(int num) {

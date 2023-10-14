@@ -4,9 +4,9 @@ import hexlet.code.App;
 import java.util.Random;
 
 public class EvenGame {
-    public static void printInstructions() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-    }
+
+    public static final String DESCRIPTION  = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
     public static void runGame() {
         String[] correctAnswers = new String[App.ROUNDS];
         String[] questions = new String[App.ROUNDS];
@@ -20,7 +20,7 @@ public class EvenGame {
         }
 
         Object[][] dataRounds = {questions, correctAnswers};
-        App.startGame(dataRounds);
+        App.startGame(dataRounds, DESCRIPTION);
     }
 
     private static boolean isEven(int num) {
