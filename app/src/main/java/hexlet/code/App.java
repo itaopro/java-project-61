@@ -74,7 +74,7 @@ public class App {
             if (correctAnswers[i].equals(answer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswers[i] + "'.\nLet's try again,   " + name + "!");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswers[i] + "'.\nLet's try again, " + name + "!");
                 return;
             }
         }
