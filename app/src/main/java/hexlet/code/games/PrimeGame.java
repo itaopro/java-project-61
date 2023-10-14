@@ -1,19 +1,18 @@
 package hexlet.code;
 
-import hexlet.code.App;
 import java.util.Random;
 
 public class PrimeGame {
 
     public static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    private static final Random random = new Random();
+    private static final Random RANDOM = new Random();
     public static void runGame() {
         String[] questions = new String[App.ROUNDS];
         String[] correctAnswers = new String[App.ROUNDS];
 
         for (int i = 0; i < App.ROUNDS; i++) {
-            int num = random.nextInt(100) + 1;
+            int num = RANDOM.nextInt(100) + 1;
             questions[i] = String.valueOf(num);
             correctAnswers[i] = isPrime(num) ? "yes" : "no";
         }

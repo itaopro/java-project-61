@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.App;
 import java.util.Random;
 
 public class GcdGame {
