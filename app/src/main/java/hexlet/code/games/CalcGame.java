@@ -5,6 +5,7 @@ import java.util.Random;
 public class CalcGame {
 
     public static final String DESCRIPTION = "What is the result of the expression?";
+    public static final int MAX_RANDOM_NUMBER = 10;
 
     public static void runGame() {
         String[] questions = new String[App.ROUNDS];
@@ -15,8 +16,8 @@ public class CalcGame {
 
         for (int i = 0; i < App.ROUNDS; i++) {
             String operator = operators[random.nextInt(operators.length)];
-            int num1 = random.nextInt(10) + 1;
-            int num2 = random.nextInt(10) + 1;
+            int num1 = random.nextInt(MAX_RANDOM_NUMBER) + 1;
+            int num2 = random.nextInt(MAX_RANDOM_NUMBER) + 1;
 
             questions[i] = num1 + " " + operator + " " + num2;
             correctAnswers[i] = String.valueOf(calculate(operator, num1, num2));

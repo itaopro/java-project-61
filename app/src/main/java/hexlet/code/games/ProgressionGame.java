@@ -8,6 +8,9 @@ import java.util.Random;
 public class ProgressionGame {
 
     public static final String DESCRIPTION = "What number is missing in the progression?";
+    private static final int MIN_STEP = 2;
+    private static final int MAX_STEP_DIFF = 3;
+    private static final int PROGRESSION_LENGTH = 20;
 
     private static final Random RANDOM = new Random();
     public static void runGame() {
@@ -34,8 +37,8 @@ public class ProgressionGame {
 
         private static List<Integer> makeProgression() {
             List<Integer> result = new ArrayList<>();
-            int randNumber = RANDOM.nextInt(3) + 2;
-            for (int i = 0; i < 20; i += randNumber) {
+            int step = RANDOM.nextInt(MAX_STEP_DIFF) + MIN_STEP;
+            for (int i = 0; i < PROGRESSION_LENGTH; i += step) {
                 result.add(i);
             }
             return result;
