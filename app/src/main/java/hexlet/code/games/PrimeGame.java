@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class PrimeGame {
 
-    public static final String DESCRIPTION = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
+    public static final String DESCRIPTION = "Answer 'yes' if the given number is prime, otherwise answer 'no'.";
 
     private static final Random random = new Random();
     public static void runGame() {
