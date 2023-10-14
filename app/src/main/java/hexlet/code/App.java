@@ -24,15 +24,19 @@ public class App {
                 EvenGame.runGame();
                 break;
             case 3:
+                greetUser();
                 CalcGame.runGame();
                 break;
             case 4:
+                greetUser();
                 GcdGame.runGame();
                 break;
             case 5:
+                greetUser();
                 ProgressionGame.runGame();
                 break;
             case 6:
+                greetUser();
                 PrimeGame.runGame();
                 break;
             case 0:
